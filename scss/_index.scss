@@ -1,0 +1,124 @@
+@use "vars" as *;
+
+.main-page{
+	padding-top: 70px;
+	background: white;
+}
+
+.top-mv{
+	padding: 20px 25px 0;
+	.mv-all{
+		height: calc(100vh - 90px);
+		background: url("../img/mv.jpg")no-repeat;
+		background-size: cover;
+		position: relative;
+		@include flex(0,center,wrap);
+		padding-bottom: 180px;
+
+	}
+	.mv-bottom{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 32px 20px;
+		background: rgba(white,0.7);
+		backdrop-filter: blur(20px);
+	}
+	.mv-block{
+		max-width: 1030px;
+		margin: 0 auto;
+		&__ttl{
+			display: block;
+			position: relative;
+			text-align: center;
+			@include font-size(20);
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 10px;
+			&:after{
+				content: "";
+				position: absolute;
+				@include v-align;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: $blue;
+			}
+			span{
+				display: inline-block;
+				background: $blue;
+				color: white;
+				position: relative;
+				z-index: 1;
+				border-radius: 20px;
+				padding: 6px 55px;
+			}
+		}
+	}
+	.mv-heading{
+		font-weight: 500;
+		@include font-size(30);
+		letter-spacing: 1px;
+		img{
+			margin-bottom: 40px;
+		}
+		small{
+			@include font-size(25);
+		}
+		&--note{
+			display: inline-block;
+			background: $blue;
+			color: white;
+			line-height: 1.2;
+			border-radius: 5px;
+			margin: 0 0 0 9px;
+			padding: 7px 13px;
+		}
+	}
+}
+
+.top-business{
+	padding: 134px 0 68px;
+	background: url(../img/business-bg.png) no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+}
+.business-note{
+	@include fts(20,40);
+	text-align: center;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin-bottom: 33px;
+	p{
+		margin-bottom: 41px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.business-block{
+	@include flex(between,0,wrap);
+	max-width: 917px;
+	margin: 0 auto;
+	&__item{
+		&--01{
+			width: calc(44% - 10px);
+			padding: 33px 0 0;
+		}
+		&--02{
+			width: calc(56% - 10px);
+		}
+		&--03{
+			width: 100%;
+			text-align: center;
+			@include font-size(16);
+			padding: 36px 0 0;
+			letter-spacing: 1.5px;
+			a{
+				text-decoration: underline;
+				color: #333;
+			}
+		}
+	}
+}
