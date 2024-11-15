@@ -2293,6 +2293,7 @@ textarea.form-control {
   left: -40px;
 }
 .question-list dl dd {
+  position: relative;
   letter-spacing: 1px;
   padding: 0 54px 0 32px;
 }
