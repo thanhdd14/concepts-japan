@@ -10,6 +10,17 @@
 	}
 }
 
+.c-bg{
+	&--blue{
+		background: $blue !important;
+	}
+	&--white{
+		background: white !important;
+	}
+	&--dark{
+		background: $dark !important;
+	}
+}
 
 
 .c-ft{//font-family
@@ -59,7 +70,8 @@ Component
 // Common Text style
 .c-txt{
 	&__basic{
-
+		@include fts(16,25.6);
+		font-weight: 300;
 	}
 }
 
@@ -74,10 +86,38 @@ Component
 		color: $blue;
 		font-family: $font-en;
 		@include font-size(40);
+		font-weight: 600;
 		line-height: 1.4;
+		position: relative;
 		margin-bottom: 52px;
+		.icon{
+			display: block;
+			margin-bottom: 10px;
+		}
 	}
-
+	&__02{
+		display: block;
+		color: $blue;
+		@include font-size(27);
+		font-weight: 600;
+		overflow: hidden;
+		span{
+			display: inline-block;
+			position: relative;
+			letter-spacing: 5.5px;
+			padding: 0 10px 0 0;
+			margin-bottom: 69px;
+			&:after{
+				content: "";
+				width: 2000px;
+				height: 2px;
+				background: $blue;
+				position: absolute;
+				@include v-align;
+				left: 100%;
+			}
+		}
+	}
 }
 
 //btn

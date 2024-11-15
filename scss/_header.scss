@@ -13,33 +13,19 @@
 		display: block;
 		width: 160px;
 	}
-	.header-mail{
-		background: #0081CC;
-		width: 182px;
-		height: 50px;
-		color: white;
-		@include flex(0,center,wrap);
-		@include font-size(16);
-		line-height: 1.2;
-		border-radius: 3px;
-		position: absolute;
-		@include v-align;
-		right: 20px;
-		padding: 0 15px;
-		img{
-			width: 17px;
-			display: block;
-			margin: 0 15px 0 0;
-		}
-		span{
-			border-left: 1px solid white;
-			display: block;
-			padding: 6px 0 6px 15px;
-		}
-	}
+
 	.header-nav{
 		width: calc(100% - 200px);
 		padding: 0 0 0 6%;
+		@include mq(tb-min){
+			//display: flex !important;
+			//justify-content: flex-end;
+			//align-items: center;
+			//flex-wrap: wrap;
+			display: block !important;
+			opacity: 1 !important;
+			transition: all 0s ease !important;
+		}
 		@include mq(tb){
 			display: none;
 			position: absolute;
@@ -134,8 +120,35 @@
 			}
 		}
 	}
+	.box-mail{
+		position: absolute;
+		@include v-align;
+		right: 20px;
+	}
 }
 
+.box-mail{
+	background: #0081CC;
+	width: 182px;
+	height: 50px;
+	color: white !important;
+	@include flex(0,center,wrap);
+	@include font-size(16);
+	line-height: 1.2;
+	border-radius: 3px;
+	position: relative;
+	padding: 0 15px;
+	img{
+		width: 17px;
+		display: block;
+		margin: 0 15px 0 0;
+	}
+	span{
+		border-left: 1px solid white;
+		display: block;
+		padding: 6px 0 6px 15px;
+	}
+}
 
 .js-locked {
 	overflow: hidden;
