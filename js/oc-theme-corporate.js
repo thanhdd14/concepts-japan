@@ -40,3 +40,13 @@ $(function () {
 		e.preventDefault();
 	});
 });
+
+
+
+new ScrollHint('.comparison-table', {
+	suggestiveShadow: true,
+	remainingTime: 5000,
+	i18n: {
+		scrollable: 'スクロールできます',
+	},
+});
