@@ -1680,6 +1680,9 @@ textarea.form-control {
     font-size: 17px;
   }
 }
+#header .header-nav__menu-item a strong {
+  font-weight: 600;
+}
 #header .js-mobile {
   width: 50px;
   position: absolute;
